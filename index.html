@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Student Support Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>🎓 AI Student Support Assistant</h1>
+    <p class="subtitle">Ask questions about college regulations, syllabus, FAQs and notices.</p>
+
+    <div class="card">
+        <h2>Ask a Question</h2>
+        <form action="/ask" method="POST">
+            <textarea name="question" placeholder="Example: What is the minimum attendance required?" required></textarea>
+            <button type="submit">Ask AI</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2>Upload College Document</h2>
+        <p>Upload syllabus, regulations, notices or FAQ PDFs.</p>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".pdf" required>
+            <button type="submit">Upload PDF</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

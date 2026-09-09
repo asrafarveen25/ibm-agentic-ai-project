@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Answer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <h2>Student Question</h2>
+        <p>{{ question }}</p>
+    </div>
+
+    <div class="card">
+        <h2>🤖 AI Student Support</h2>
+        <div class="answer">{{ answer }}</div>
+    </div>
+
+    <a href="/">← Ask another question</a>
+</div>
+</body>
+</html>
